@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import evelyn from "./assets/evelyn.png";
 import nicola from "./assets/nicola.png";
+import headerImg from "./assets/header-img.png";
+import github from "./assets/social-media-04.png";
+import linkedin from "./assets/social-media-05.png";
+import backFlip from "./assets/back-06.png";
 
 class App extends Component {
     constructor(props){
@@ -21,12 +25,16 @@ class App extends Component {
               <div className="card-header">bcit d3</div>
               <hr className="hr-pretty"/>
             <div className="card-name">nicola parker</div>
-            <img src={nicola} style={photo} />
+            <img className="mx-auto d-block" src={nicola} style={photo} />
+              <hr className="hr-pretty-yellow"/>
             <div className="card-desc">Full Stack Development
-              <div className="italics"> & frisbees</div></div>
-            <button
+              <div className="italics"> & frisbees</div>
+              <button
               className="btn"
-              onClick={()=>this.setState({ nicCard: true })}>ABOUT ME</button>
+              onClick={()=>this.setState({ nicCard: true })}>ABOUT ME
+            </button>
+              </div>
+            
         </div>
           )
       } else if (this.state.nicCard === true){
@@ -35,77 +43,95 @@ class App extends Component {
               <div className="card-header">nicola parker</div>
               <hr className="hr-pretty"/>
                 <div className="icons">
-                    <div className="placeholder"></div>
-                    <div className="placeholder"></div>
+                    <img className="iconImg" src={github}/>
+                    <img className="iconImg" src={linkedin}/>
                 </div>
-<button className="btn">PORTFOLIO</button>
-<div className="info">
-<div className="info-header">TOP SKILLS</div>
-<div>javascript, wordpress, logo design</div>
-<div className="info-header">DREAM JOB</div>
-<div>developer at amazon</div>
-<div className="info-header">IDEAL WEEKEND</div>
-<div>hiking, frisbee, reading</div>
-<div className="info-header">2018 GOAL</div>
-<div>learn node.js</div>
-</div>
-          <div
-              className="placeholder"
-              onClick={()=>this.setState({ nicCard: false })}></div>
-            </div>
+                <div className="text-center">
+                    <button className="btn text-center">PORTFOLIO</button>
+                </div>        
+                <div className="info">
+                <div className="info-header">TOP SKILLS</div>
+                <div className="info-body">javascript, wordpress, logo design</div>
+                <div className="info-header">DREAM JOB</div>
+                <div className="info-body">developer at amazon</div>
+                <div className="info-header">IDEAL WEEKEND</div>
+                <div className="info-body">hiking, frisbee, reading</div>
+                <div className="info-header">2018 GOAL</div>
+                <div className="info-body">learn node.js</div>
+                </div>    
+                <div className="text-center">
+                    <img className="iconImg" src={backFlip} onClick={()=>this.setState({ nicCard: false })}/>
+                </div>
+                </div>
           )
       }
       if (this.state.evCard === false){
           evCard = (
-            <div className="card">
-              <div className="card-header">bcit d3</div>
-              <hr className="hr-pretty"/>
+              
+        <div className="card">
+            <div className="card-header">bcit d3</div>
+            <hr className="hr-pretty"/>
             <div className="card-name">evelyn cranston</div>
-            <img src={evelyn} style={photo} />
+            <img className="mx-auto d-block" src={evelyn} style={photo} />
+            <hr className="hr-pretty-yellow"/>
+              
             <div className="card-desc">Front End Design 
-              <div className="italics"> & bikes</div></div>
-            <button
-              className="btn"
-              onClick={()=>this.setState({ evCard: true })}>ABOUT ME</button>
+              <div className="italics"> & bikes
+              </div>
+                  <button
+                      className="btn text-center"
+                      onClick={()=>this.setState({ evCard: true })}>ABOUT ME
+                </button>
+            </div>
+            
         </div>
           )
       } else if (this.state.evCard === true){
           evCard = (
-          <div className="card">
-            <div className="card-header">evelyn cranston</div>
+            <div className="card">
+              <div className="card-header">evelyn cranston</div>
               <hr className="hr-pretty"/>
                 <div className="icons">
-                    <div className="placeholder"></div>
-                    <div className="placeholder"></div>
+                    <img className="iconImg" src={github}/>
+                    <img className="iconImg" src={linkedin}/>
                 </div>
-<button className="btn">PORTFOLIO</button>
-<div className="info">
-<div className="info-header">TOP SKILLS</div>
-<div>javascript, design, react</div>
-<div className="info-header">DREAM JOB</div>
-<div>overlord of slack</div>
-<div className="info-header">IDEAL WEEKEND</div>
-<div>getting coffee, adventures, reading</div>
-<div className="info-header">2018 GOAL</div>
-<div>learn node.js</div>
-</div>
-          <div
-              className="placeholder"
-              onClick={()=>this.setState({ evCard: false })}>FLIP</div>
-            </div>
+                <div className="text-center">
+                    <button className="btn text-center">PORTFOLIO</button>
+                </div>        
+                <div className="info">
+                <div className="info-header">TOP SKILLS</div>
+                <div className="info-body">javascript, wordpress, logo design</div>
+                <div className="info-header">DREAM JOB</div>
+                <div className="info-body">developer at amazon</div>
+                <div className="info-header">IDEAL WEEKEND</div>
+                <div className="info-body">hiking, frisbee, reading</div>
+                <div className="info-header">2018 GOAL</div>
+                <div className="info-body">learn node.js</div>
+                </div>    
+                <div className="text-center">
+                    <img className="iconImg" src={backFlip} onClick={()=>this.setState({ evCard: false })}/>
+                </div>
+                </div>
           )
       }
     return (
-      <div style={container}>
+    <div className="container" style={container}>
         <div className="pageContainer">
-        <div className="pageHeader">Nicola & Evelyn</div>
-        <div className="content">
-        {nicCard}
-        {evCard}
-        
+            <div className="row">
+                <div className="col-xs-12 col-md-2">
+                    <div className="headerImg">
+                        <img style={imgHeaderStyle} src={headerImg}/>
+                    </div>
+                </div>
+                    <div className="col-xs-12 col-md-5">
+                            {nicCard}
+                    </div>
+                    <div className="col-xs-12 col-md-5">
+                            {evCard}
+                    </div>
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
     );
   }
 }
@@ -119,5 +145,10 @@ const container = {
 }
 const photo = {
     width: "135px",
-    height: "182px"
+    height: "135px"
+}
+
+const imgHeaderStyle={
+    width: "150px",
+    height: "150px"
 }

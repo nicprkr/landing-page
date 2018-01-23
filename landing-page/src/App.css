@@ -7,52 +7,72 @@ body {
     width: 90vw;
     height: 90vh;
 }
+
 .pageHeader {
     text-align:center;
     font-size: 1.8em;
     font-family: 'Ubuntu', sans-serif;
 }
+
 .content {
-    position: absolute;
-    width:90vw;
-    height:40vh;
+    
     margin: 0 auto;
     top: 10vh;
     font-family: "Ubuntu Mono", monospace;
 }
+
 .card {
-    width: 32%;
-    min-height: 80.2vh;
+    margin-top: 40px;
     text-align: center;
     border-radius: 10px;
-    display: inline-block;
     padding: 2% 4% 2% 4%;
-    margin-left: 8%;
     background-color: #F2F2F2;
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+
 .btn {
+    text-align: center;
     border: 2px solid;
-    border-radius: 8px;
+    border-radius: 20px;
     color: #1D41A8;
     background-color: #FFFEF8;
     padding: 8px;
     width: 60%;
     margin: 16px;
     font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 .card-header {
     font-size: 0.8em;
     text-align: left;
     font-weight:600;
+    font-family: "Ubuntu Mono", monospace;
+    border-bottom: 0;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-bottom: 2px;
 }
+
 .hr-pretty {
     border: 2px solid #1D41A8;
+    margin-bottom: 0;
+    width: 90%;
+    margin-top: 0;
 }
+
+.hr-pretty-yellow {
+    border: 3px solid #F8C52A;
+    margin-bottom: 0;
+    margin-top: 0rem;
+    width: 60%
+}
+
 .card-name {
     font-size: 1.4em;
     font-weight:600;
     padding: 8%;
+    font-family: "Ubuntu Mono", monospace;
 }
 .italics {
     font-style: italic;
@@ -61,23 +81,28 @@ body {
     padding: 4%;
     font-size: 11pt;
     font-weight: 200;
+    font-family: "Ubuntu Mono", monospace;
 }
-.icons {
-    width: 100%;
+.iconImg {
+    width: 20%;
 }
+
 .placeholder {
     margin: 2%;
     height: 50px;
     width: 50px;
-    display: inline-block;
+    
     border-radius: 50%;
     background-color: #1D41A8;
-    
 }
 .info-header {
     font-weight:600;
     font-family: "Ubuntu", sans-serif;
     padding: 4% 2% 0% 2%;
+}
+
+.info-body{
+    font-family: "Ubuntu Mono", monospace;
 }
 .info {
     text-align: left;
