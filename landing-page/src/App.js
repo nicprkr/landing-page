@@ -20,10 +20,10 @@ class App extends Component {
             <div className="card">
               <div className="card-header">bcit d3</div>
               <hr className="hr-pretty"/>
-            <div class="card-name">nicola parker</div>
+            <div className="card-name">nicola parker</div>
             <img src={nicola} style={photo} />
             <div className="card-desc">Full Stack Development
-              <div class="italics"> & frisbees</div></div>
+              <div className="italics"> & frisbees</div></div>
             <button
               className="btn"
               onClick={()=>this.setState({ nicCard: true })}>ABOUT ME</button>
@@ -35,23 +35,23 @@ class App extends Component {
               <div className="card-header">nicola parker</div>
               <hr className="hr-pretty"/>
                 <div className="icons">
-                    <div class="placeholder"></div>
-                    <div class="placeholder"></div>
+                    <div className="placeholder"></div>
+                    <div className="placeholder"></div>
                 </div>
 <button className="btn">PORTFOLIO</button>
-<div class="info">
-<div class="info-header">TOP SKILLS</div>
+<div className="info">
+<div className="info-header">TOP SKILLS</div>
 <div>javascript, wordpress, logo design</div>
-<div class="info-header">DREAM JOB</div>
+<div className="info-header">DREAM JOB</div>
 <div>developer at amazon</div>
-<div class="info-header">IDEAL WEEKEND</div>
+<div className="info-header">IDEAL WEEKEND</div>
 <div>hiking, frisbee, reading</div>
-<div class="info-header">2018 GOAL</div>
+<div className="info-header">2018 GOAL</div>
 <div>learn node.js</div>
 </div>
           <div
               className="placeholder"
-              onClick={()=>this.setState({ nicCard: false })}>FLIP</div>
+              onClick={()=>this.setState({ nicCard: false })}></div>
             </div>
           )
       }
@@ -60,10 +60,10 @@ class App extends Component {
             <div className="card">
               <div className="card-header">bcit d3</div>
               <hr className="hr-pretty"/>
-            <div class="card-name">evelyn cranston</div>
+            <div className="card-name">evelyn cranston</div>
             <img src={evelyn} style={photo} />
             <div className="card-desc">Front End Design 
-              <div class="italics"> & bikes</div></div>
+              <div className="italics"> & bikes</div></div>
             <button
               className="btn"
               onClick={()=>this.setState({ evCard: true })}>ABOUT ME</button>
@@ -75,18 +75,18 @@ class App extends Component {
             <div className="card-header">evelyn cranston</div>
               <hr className="hr-pretty"/>
                 <div className="icons">
-                    <div class="placeholder"></div>
-                    <div class="placeholder"></div>
+                    <div className="placeholder"></div>
+                    <div className="placeholder"></div>
                 </div>
 <button className="btn">PORTFOLIO</button>
-<div class="info">
-<div class="info-header">TOP SKILLS</div>
+<div className="info">
+<div className="info-header">TOP SKILLS</div>
 <div>javascript, design, react</div>
-<div class="info-header">DREAM JOB</div>
+<div className="info-header">DREAM JOB</div>
 <div>overlord of slack</div>
-<div class="info-header">IDEAL WEEKEND</div>
+<div className="info-header">IDEAL WEEKEND</div>
 <div>getting coffee, adventures, reading</div>
-<div class="info-header">2018 GOAL</div>
+<div className="info-header">2018 GOAL</div>
 <div>learn node.js</div>
 </div>
           <div
