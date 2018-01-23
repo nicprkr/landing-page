@@ -91,10 +91,10 @@ body {
     margin: 2%;
     height: 50px;
     width: 50px;
-    
     border-radius: 50%;
     background-color: #1D41A8;
 }
+
 .info-header {
     font-weight:600;
     font-family: "Ubuntu", sans-serif;
@@ -105,6 +105,10 @@ body {
     font-family: "Ubuntu Mono", monospace;
 }
 .info {
+    padding-left: 10px;
     text-align: left;
     font-size: 0.9em;
+    border-left-color: #F8C52A;
+    border-left-width: 4px;
+    border-left-style: solid;
 }

@@ -43,11 +43,17 @@ class App extends Component {
               <div className="card-header">nicola parker</div>
               <hr className="hr-pretty"/>
                 <div className="icons">
-                    <img className="iconImg" src={github}/>
-                    <img className="iconImg" src={linkedin}/>
+                    <a href="https://github.com/nicprkr" target="_blank">
+                        <img className="iconImg" src={github}/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nicprkr/" target="_blank">
+                        <img className="iconImg" src={linkedin}/>
+                    </a>
                 </div>
                 <div className="text-center">
+                <a href="http://nickinickidesign.com/" target="_blank">
                     <button className="btn text-center">PORTFOLIO</button>
+                </a>
                 </div>        
                 <div className="info">
                 <div className="info-header">TOP SKILLS</div>
@@ -92,21 +98,27 @@ class App extends Component {
               <div className="card-header">evelyn cranston</div>
               <hr className="hr-pretty"/>
                 <div className="icons">
-                    <img className="iconImg" src={github}/>
-                    <img className="iconImg" src={linkedin}/>
+                    <a href="https://github.com/evc-" target="_blank">
+                        <img className="iconImg" src={github}/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/evelyncr/" target="_blank">
+                        <img className="iconImg" src={linkedin}/>
+                    </a>
                 </div>
                 <div className="text-center">
+                     <a href="http://evelyncranston.com/" target="_blank">
                     <button className="btn text-center">PORTFOLIO</button>
-                </div>        
+                </a>
+                </div>
                 <div className="info">
                 <div className="info-header">TOP SKILLS</div>
-                <div className="info-body">javascript, wordpress, logo design</div>
+                <div className="info-body">front end dev, visual design</div>
                 <div className="info-header">DREAM JOB</div>
-                <div className="info-body">developer at amazon</div>
+                <div className="info-body">slack UI designer</div>
                 <div className="info-header">IDEAL WEEKEND</div>
-                <div className="info-body">hiking, frisbee, reading</div>
+                <div className="info-body">museum, coffee, dancing</div>
                 <div className="info-header">2018 GOAL</div>
-                <div className="info-body">learn node.js</div>
+                <div className="info-body">work with a tech startup</div>
                 </div>    
                 <div className="text-center">
                     <img className="iconImg" src={backFlip} onClick={()=>this.setState({ evCard: false })}/>
@@ -118,15 +130,15 @@ class App extends Component {
     <div className="container" style={container}>
         <div className="pageContainer">
             <div className="row">
-                <div className="col-xs-12 col-md-2">
+                <div className="col-xs-12 col-sm-2 col-lg-4">
                     <div className="headerImg">
                         <img style={imgHeaderStyle} src={headerImg}/>
                     </div>
                 </div>
-                    <div className="col-xs-12 col-md-5">
+                    <div className="col-xs-12 col-sm-5 col-lg-4">
                             {nicCard}
                     </div>
-                    <div className="col-xs-12 col-md-5">
+                    <div className="col-xs-12 col-sm-5 col-lg-4">
                             {evCard}
                     </div>
             </div>
@@ -144,11 +156,11 @@ const container = {
     color: "#1D41A8"
 }
 const photo = {
-    width: "135px",
-    height: "135px"
+    width: "150px",
+    height: "150px"
 }
 
 const imgHeaderStyle={
-    width: "150px",
-    height: "150px"
+    width: "100%",
+    height: "100%"
 }
