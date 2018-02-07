@@ -1,4 +1,4 @@
--import React, { Component } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import mySocket from 'socket.io-client';
 import sendIcon from './assets/send.png';
