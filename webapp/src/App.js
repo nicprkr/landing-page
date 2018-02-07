@@ -8,6 +8,8 @@ import linkedin from "./assets/social-media-05.png";
 import backFlip from "./assets/back-06.png";
 import mySocket from 'socket.io-client';
 import Chat from './chat.js';
+import chatImg from './assets/chat.png';
+
 
 class App extends Component {
     constructor(props){
@@ -19,6 +21,8 @@ class App extends Component {
         }
     }
   render() {
+      
+      
       var nicCard = null;
       var evCard = null;
       
@@ -29,8 +33,12 @@ class App extends Component {
               <div className="card-header">bcit d3</div>
               <hr className="hr-pretty"/>
             <div className="card-name">chat</div>
-              <hr className="hr-pretty-yellow"/>
-          <button onClick={()=>this.setState({ chat: true })}>Click to chat!</button>
+            <div className="card-desc">
+                <img className="mx-auto d-block" src={chatImg} style={photo} />
+                <button className="clickToChat btn" onClick={()=>this.setState({ chat: true })}>
+                    begin chat
+                </button>
+            </div>
         </div>
       )
   } else if (this.state.chat === true){
@@ -39,9 +47,13 @@ class App extends Component {
               <div className="card-header">bcit d3</div>
               <hr className="hr-pretty"/>
             <div className="card-name">chat</div>
-              <hr className="hr-pretty-yellow"/>
-                  <div><Chat /></div>
-        <button onClick={()=>this.setState({ chat : false })}>End Chat</button>
+              
+            <div className="card-desc">
+                <Chat />
+                <div className="text-center">
+                    <img className="iconImg" src={backFlip} onClick={()=>this.setState({ chat: false })}/>
+                </div>
+            </div>
         </div>
 )
     }
@@ -175,6 +187,9 @@ class App extends Component {
                             {chatCard}
                     </div>
             </div>
+        
+            <br />
+            <br />
         
         </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import mySocket from 'socket.io-client';
+import sendIcon from './assets/send.png';
 
 class Chat extends Component {
     constructor(props){
@@ -64,8 +65,8 @@ this.joinChat = this.joinChat.bind(this);
       if(this.state.mode===0){
       comp = (
         <div>
-            <input type="text" placeholder="type in your username" onChange={this.handleChange}/>
-          <button onClick={this.joinChat}>Join Chat</button>
+            <input className ="txtEntry" type="text" placeholder="Enter Name" onChange={this.handleChange}/>
+          <button className="btn" onClick={this.joinChat}>Join Chat</button>
           </div>
       )
       } else if (this.state.mode === 1){
@@ -73,8 +74,8 @@ this.joinChat = this.joinChat.bind(this);
           <div id="chatBox">
               <div id="chatDisplay"></div>
               <div id="Controls">
-              <input type="text" placeholder="type your msg here" onChange={this.handleMyMsg} />
-              <button onClick={this.sendMsg}>Send</button>
+              <input className ="txtEntry" type="text" placeholder="..." onChange={this.handleMyMsg} />
+                    <img id="sendIcon" className="iconImg" src={sendIcon} onClick={this.sendMsg}/>
               </div>
               </div>
           );
@@ -82,7 +83,7 @@ this.joinChat = this.joinChat.bind(this);
       var allNames = this.state.allUsers.map((obj, i)=>{
           return ( 
               <span key={i}>
-              {obj}<span> - </span>
+                {obj}<span> - </span>
               </span>
               )
       });
@@ -94,9 +95,10 @@ this.joinChat = this.joinChat.bind(this);
               )
       });
     return (
-      <div className="chattyBox">
-        <div className="userBox">ALL USERS
-        <div>{allNames}</div>
+      <div className="chatContainer">
+        <div className="userBox">
+            ALL USERS
+            <div>{allNames}</div>
         </div>
         {allMsgs}
         {comp}
