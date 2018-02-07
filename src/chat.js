@@ -106,3 +106,4 @@ this.joinChat = this.joinChat.bind(this);
     );
   }
 }
+export default Chat;
